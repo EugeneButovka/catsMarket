@@ -1,0 +1,247 @@
+
+.shop__shop-content {
+	display: block;
+	margin: 20px;
+}
+
+.cat-item {
+	display: inline-block;
+	/*display: block;*/
+	width: 200px;
+	height: 700px;
+	
+	line-height: 26pt;
+	text-align: left;
+	margin-right: 50px;
+	margin-top: 20px;
+	overflow: hidden;
+}
+
+.cat-item:after {
+	content: '';
+	width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
+	display: inline-block;
+}
+
+.cat-item__cat-image {
+	display: inline-block;
+	width: 200px;
+	height: 300px;
+	position: relative;
+	margin-right: 50px;
+}
+
+.image {
+	max-width: 100%;
+	max-height: 100%;
+	position: absolute;
+	bottom: 0;
+	transition: opacity 1s;
+}
+
+.image:hover {
+	opacity: 0.7;
+}
+
+.cat-item__cat-info {
+	display: inline-block;
+	width: 200px;
+	margin-right: 50px;
+}
+
+.cat-item__cat-name {
+	display: inline-block;
+	font-size: 20pt;
+	transition: color 0.5s;
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.cat-item__cat-name:hover  {
+	color: red;
+}
+
+.cat-item__cat-category {
+	font-size: 10pt;
+	color: darkgray;
+}
+
+.cat-item__cat-kindness {
+	font-size: 16pt;
+	/*color: darkgray;*/
+}
+
+
+
+.cat-rating {
+	margin: 0;
+	padding: 0;
+	border: none;
+	line-height: normal;
+	height: 40pt;
+	position: relative;
+}
+
+.cat-rating__caption {
+	font-size: 12pt;
+}
+
+.cat-rating-group {
+	position: relative;
+	width: calc(13pt * 10);
+	height: 26pt;
+	background-color: transparent;
+	background-image: url("images/star_off.svg");
+	background-size: 26pt 100%, 13pt;
+	background-repeat: repeat-x;
+}
+
+.cat-rating__star {
+	position: absolute;
+	left: 0;
+	font-size: inherit;
+	width: 13pt;
+	height: 26pt;
+	margin: 0;
+	padding: 0;
+	
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+
+.cat-rating__star:focus {
+	outline: none;
+}
+
+.cat-rating__star:checked {
+	background-image: url("images/star_on.svg");
+	background-size: 26pt 100%, 13pt;
+	background-repeat: repeat-x;
+}
+
+.cat-rating__star:hover {
+	background-image: url("images/star_on.svg");
+	background-size: 26pt 100%, 13pt;
+	background-repeat: repeat-x;
+}
+
+.cat-rating__star:hover ~ .cat-rating__star {
+	background-image: url("images/star_off.svg");
+	background-size: 26pt 100%, 13pt;
+	background-repeat: repeat-x;
+}
+
+.cat-rating__star:nth-of-type(1) {
+	width: calc(13pt * 1);
+	z-index: 10;
+}
+.cat-rating__star:nth-of-type(2) {
+	width: calc(13pt * 2);
+	z-index: 9;
+}
+.cat-rating__star:nth-of-type(3) {
+	width: calc(13pt * 3);
+	z-index: 8;
+}
+.cat-rating__star:nth-of-type(4) {
+	width: calc(13pt * 4);
+	z-index: 7;
+}
+.cat-rating__star:nth-of-type(5) {
+	width: calc(13pt * 5);
+	z-index: 6;
+}
+.cat-rating__star:nth-of-type(6) {
+	width: calc(13pt * 6);
+	z-index: 5;
+}
+.cat-rating__star:nth-of-type(7) {
+	width: calc(13pt * 7);
+	z-index: 4;
+}
+.cat-rating__star:nth-of-type(8) {
+	width: calc(13pt * 8);
+	z-index: 3;
+}
+.cat-rating__star:nth-of-type(9) {
+	width: calc(13pt * 9);
+	z-index: 2;
+}
+.cat-rating__star:nth-of-type(10) {
+	width: calc(13pt * 10);
+	z-index: 1;
+}
+
+
+.cat-item__cat-price {
+	font-size: 26pt;
+	color: maroon;
+	
+}
+
+.cat-item__cat-old-price {
+	font-size: 16pt;
+	line-height: 16pt;
+	margin-left: 10px;
+	vertical-align: middle;
+	text-decoration: #000000 line-through;
+	color: #000000;
+}
+
+.cat-item__cat-description {
+	display: inline-block;
+	width: 200px;
+	/*width: fit-content;*/
+	font-size: 12pt;
+	white-space: normal;
+}
+
+.shop__presentation-switch {
+	display: block;
+}
+.shop__presentation-switch:checked ~ .cat-item {
+	display: block;
+	width: auto;
+	/*width: 100%;*/
+	height: 300px;
+	white-space: nowrap;
+}
+
+.shop__presentation-switch:checked ~ .cat-item .cat-item__cat-image .image {
+	top: 0;
+	bottom: auto;
+	vertical-align: top;
+}
+
+.shop__presentation-switch:checked ~ .cat-item .cat-item__cat-info {
+	vertical-align: top;
+}
+
+.shop__presentation-switch:checked ~ .cat-item .cat-item__cat-description {
+	width:  calc(100% - 200px - 50px - 200px - 50px);
+	vertical-align: top;
+}
+
+header {
+	box-sizing: content-box;
+	/*margin-bottom: 20px;*/
+	/*padding: 1px;*/
+	text-align: center;
+}
+
+header h1 {
+	margin: 10px;
+}
+
+header p {
+	margin: 0;
+}
+
+
+footer {
+	/*position: sticky;*/
+	/*bottom: 0;*/
+}
